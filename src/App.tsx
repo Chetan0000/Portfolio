@@ -3,6 +3,7 @@ import "./App.css";
 
 import Navbar from "./components/navbar/Navbar";
 import LandingComponent from "./components/landing/LandingComponent";
+import About from "./components/About/About";
 function App() {
   useEffect(() => {
     const mp = async () => {
@@ -17,6 +18,8 @@ function App() {
       <Navbar />
 
       <LandingComponent />
+
+      <About />
     </div>
   );
 }

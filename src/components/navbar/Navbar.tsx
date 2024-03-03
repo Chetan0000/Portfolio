@@ -16,7 +16,7 @@ const Navbar: React.FC = () => {
   ]);
   return (
     <>
-      <div className="fixed z-[999] w-[100%] text-center flex justify-between px-2 lg:px-20 md:px-16 sm:px-2 text-white pt-[10px] ">
+      <div className="fixed z-[999] w-full text-center flex justify-between px-2 lg:px-20 md:px-16 sm:px-2 text-white pt-[10px] ">
         {/* ---- logo ---------- */}
 
         <div

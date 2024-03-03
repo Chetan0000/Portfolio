@@ -3,8 +3,13 @@
 @tailwind utilities;
 
 .secondary_font {
-  font-family: "Poppins", sans-serif;
+  /* font-family: "Poppins", sans-serif;
   font-weight: 700;
+  font-style: normal; */
+
+  font-family: "Teko", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
   font-style: normal;
 }
 .primary_font_200 {
@@ -28,4 +33,8 @@
   font-style: normal;
 
   /* line-height: 46px; */
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
 }
