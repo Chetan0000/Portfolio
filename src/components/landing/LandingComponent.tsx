@@ -3,15 +3,15 @@ import Button from "../Button/Button";
 
 type flipperType = number;
 const LandingComponent: React.FC = () => {
-  const [flipper, setFlipper] = useState<flipperType>(1);
+  const [flipper, setFlipper] = useState<flipperType>(0);
   return (
     <div className="w-full h-full bg-zinc-800 pt-2 border-2 border-red-700 ">
       <div className="textarea">
-        <div className="text-[15vw] lg:text-[10vw] md:text-[12vw] sm:text-[15vw] uppercase mt-52 px-5 lg:px-20 md:px-16 sm:px-5 leading-none  secondary_font">
+        <div className="text-[18vw] lg:text-[10vw] md:text-[12vw] sm:text-[15vw] uppercase mt-52 px-5 lg:px-20 md:px-16 sm:px-5 leading-none  secondary_font">
           <div className="text-[14px] lg:text-[20px] md:text-[20px] mb-[2vw] primary_font_600">
             Hello
           </div>
-          <div className="masker flex tracking-tighter">
+          <div className="masker flex tracking-normal lg:tracking-tighter md:tracking-tighter sm:tracking-normal">
             <div className="pr-[0.5vw]">
               <h1>I </h1>
             </div>
@@ -21,7 +21,7 @@ const LandingComponent: React.FC = () => {
               </div>
             )}
 
-            <div className="px-[0.5vw]">
+            <div className="px-[1vw]">
               <h1> am </h1>
             </div>
             <div className="">
