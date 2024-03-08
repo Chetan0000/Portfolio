@@ -38,3 +38,8 @@
 .no-scrollbar::-webkit-scrollbar {
   display: none;
 }
+
+/* .react_icon {
+  color: rgb(97, 218, 251);
+  text-shadow: 0 0 0.5rem #fff 0 0 1rem #fff 0 0 1.5rem rgb(97, 218, 251);
+} */

@@ -1,7 +1,27 @@
 // import Image from "next/image"
-import { CardBody, CardContainer, CardItem } from "./SkillCard";
 
+import "./skill.css";
+
+import { CardBody, CardContainer, CardItem } from "./SkillCard";
+import tailWIndSVG from "../../assets/tailwind-css.svg";
+import express from "../../assets/pngwing.com.png";
 import React from "react";
+
+//  ------- Icons
+import { FaReact } from "react-icons/fa";
+import { SiRedux } from "react-icons/si";
+import { ImHtmlFive2 } from "react-icons/im";
+import { TbBrandCss3 } from "react-icons/tb";
+
+import { FaNodeJs } from "react-icons/fa6";
+import { DiMongodb } from "react-icons/di";
+import { GrMysql } from "react-icons/gr";
+
+import { LiaDocker } from "react-icons/lia";
+import { FaAws } from "react-icons/fa";
+
+import { FaJava } from "react-icons/fa6";
+import { RiJavascriptLine } from "react-icons/ri";
 
 const Skills = () => {
   const skills = {
@@ -17,66 +37,328 @@ const Skills = () => {
     },
   };
   return (
-    <div className="h-[50rem] w-full dark:bg-black bg-white  dark:bg-grid-small-white/[0.2] bg-grid-small-black/[0.2] relative flex items-center justify-center">
-      {/* Radial gradient for the container to give a faded look */}
-      <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
-      <p className="text-4xl sm:text-7xl font-bold relative z-20 bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-500 py-8"></p>
-
-      <div className="w-full min-h-full bg-zinc-800 ">
-        <div className="px-5 lg:px-20 md:px-16 sm:px-5">
-          <div className="Heading secondary_font text-[8vw] lg:text-[5vw] md:text-[6vw] sm:text-[8vw]">
-            <h1>Skills</h1>
-          </div>
-          <div className=" grid grid-rows-4 lg:grid-rows-2 md:grid-rows-2 sm:grid-rows-1 grid-cols-3 gap-3 ">
-            {[4, 2, 3, 4].map((index, item) => {
-              return (
+    <div className="w-full min-h-[50%] bg-zinc-800  border-2 border-yellow-500 pt-2">
+      <div className="px-5 lg:px-20 md:px-16 sm:px-5 mt-[50]">
+        <div className="Heading secondary_font text-[8vw] lg:text-[5vw] md:text-[6vw] sm:text-[8vw]">
+          <h1>Skills</h1>
+        </div>
+        <div className=" grid grid-rows-4 lg:grid-rows-1 md:grid-rows-2 sm:grid-rows-1 grid-cols-1 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-1 gap-3 primary_font_400 mt-[6vw] lg:mt-[3vw] md:mt-[3vw]">
+          {/* ----- front end  */}
+          <div className="FRONTEND">
+            <CardContainer className="inter-var  ">
+              <CardBody className=" bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6   ">
+                <CardItem
+                  translateZ="50"
+                  className="react_icon text-[6vw] lg:text-[2vw] md:text-[2.5vw] sm:text-[5vw] font-bold text-neutral-600 dark:text-zinc-400"
+                >
+                  Frontend
+                </CardItem>
                 <>
-                  <CardContainer className="inter-var border-2 border-white w-[400px]">
-                    <CardBody className="bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6   ">
-                      <CardItem
-                        translateZ="50"
-                        className="text-xl font-bold text-neutral-600 dark:text-white"
-                      >
-                        Make things float in air
-                      </CardItem>
-                      <CardItem
-                        as="p"
-                        translateZ="60"
-                        className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300"
-                      >
-                        Hover over this card
-                      </CardItem>
-                      <CardItem translateZ="100" className="w-full mt-4">
-                        <div>Image</div>
-                        {/* <Image
-            src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=2560&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-            height="1000"
-            width="1000"
-            className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
-            alt="thumbnail"
-          /> */}
-                      </CardItem>
-                      <div className="flex justify-between items-center mt-20">
-                        <CardItem
-                          translateZ={20}
-                          as="button"
-                          className="px-4 py-2 rounded-xl text-xs font-normal dark:text-white"
-                        >
-                          Try now →
-                        </CardItem>
-                        <CardItem
-                          translateZ={20}
-                          as="button"
-                          className="px-4 py-2 rounded-xl bg-black dark:bg-white dark:text-black text-white text-xs font-bold"
-                        >
-                          Sign up
-                        </CardItem>
-                      </div>
-                    </CardBody>
-                  </CardContainer>
+                  <CardItem
+                    as="p"
+                    translateZ="70"
+                    className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300  w-[70vw] lg:w-full md:w-full"
+                  >
+                    <div className="flex items-center gap-1 ">
+                      <span className=" text-[18px]">
+                        <FaReact className="text-[#61DBFB]" />
+                      </span>
+                      <span className="">React js</span>
+                    </div>
+                  </CardItem>
+                  <CardItem
+                    as="p"
+                    translateZ="70"
+                    className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300"
+                  >
+                    <div className="flex justify-center items-center gap-1">
+                      <span className=" text-[18px]">
+                        <SiRedux className="text-[#764abc]" />
+                      </span>
+                      <span className="">Redux Toolkit</span>
+                    </div>
+                  </CardItem>
+                  <CardItem
+                    as="p"
+                    translateZ="70"
+                    className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300"
+                  >
+                    <div className="flex justify-center items-center gap-1">
+                      <span className=" text-[18px] -ml-1">
+                        <img
+                          className="   w-[22px] h-[22px] "
+                          src={tailWIndSVG}
+                          alt="TailWend svg"
+                        />
+                      </span>
+                      <span className="">Tailwend css</span>
+                    </div>
+                  </CardItem>
+                  <CardItem
+                    as="p"
+                    translateZ="70"
+                    className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300"
+                  >
+                    <div className="flex justify-center items-center gap-1">
+                      <span className=" text-[18px]">
+                        <ImHtmlFive2 className="text-[#f06529]" />
+                      </span>
+                      <span className="">HTML</span>
+                    </div>
+                  </CardItem>
+
+                  <CardItem
+                    as="p"
+                    translateZ="70"
+                    className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300"
+                  >
+                    <div className="flex justify-center items-center gap-1">
+                      <span className=" text-[18px]">
+                        <TbBrandCss3 className="text-[#2965f1]" />
+                      </span>
+                      <span className="">CSS</span>
+                    </div>
+                  </CardItem>
                 </>
-              );
-            })}
+              </CardBody>
+            </CardContainer>
+          </div>
+
+          {/* Back end */}
+          <div className="BACKEND">
+            <CardContainer className="inter-var  ">
+              <CardBody className="h-auto bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] rounded-xl p-6   ">
+                <CardItem
+                  translateZ="50"
+                  className="react_icon text-[6vw] lg:text-[2vw] md:text-[2.5vw] sm:text-[5vw] font-bold text-neutral-600 dark:text-zinc-400"
+                >
+                  Backend
+                </CardItem>
+                <>
+                  <CardItem
+                    as="p"
+                    translateZ="70"
+                    className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300  w-[70vw] lg:w-full md:w-full"
+                  >
+                    <div className="flex items-center gap-1 ">
+                      <span className=" text-[18px]">
+                        <FaNodeJs className="text-[#3c873a]" />
+                      </span>
+                      <span className="">Node js</span>
+                    </div>
+                  </CardItem>
+                  <CardItem
+                    as="p"
+                    translateZ="70"
+                    className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300"
+                  >
+                    <div className="flex justify-center items-center gap-1">
+                      <span className=" text-[18px] -ml-[2px]">
+                        <img
+                          className="   w-[22px] h-[22px] object-cover"
+                          src={express}
+                          alt="TailWend svg"
+                        />
+                      </span>
+                      <span className="">Express js</span>
+                    </div>
+                  </CardItem>
+                  <CardItem
+                    as="p"
+                    translateZ="70"
+                    className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300"
+                  >
+                    <div className="flex justify-center items-center gap-1">
+                      <span className=" text-[18px] -ml-1">
+                        <DiMongodb className="text-[#00ED64] text-[20px] ml-[2px]" />
+                      </span>
+                      <span className="">Mongo DB</span>
+                    </div>
+                  </CardItem>
+                  <CardItem
+                    as="p"
+                    translateZ="70"
+                    className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300"
+                  >
+                    <div className="flex justify-center items-center gap-1">
+                      <span className=" text-[18px] font-bold">
+                        <GrMysql className="text-[#00758f] " />
+                      </span>
+                      <span className="">SQL</span>
+                    </div>
+                  </CardItem>
+
+                  <CardItem
+                    as="p"
+                    translateZ="70"
+                    className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300"
+                  >
+                    <div className="flex justify-center items-center gap-1">
+                      <span className=" text-[18px] font-bold">
+                        {/* <GrMysql className="text-[#00758f] " /> */}
+                      </span>
+                      <span className="text-black">. </span>
+                    </div>
+                  </CardItem>
+                </>
+              </CardBody>
+            </CardContainer>
+          </div>
+
+          {/* devops */}
+          <div className="DEVOPS">
+            <CardContainer className="inter-var  ">
+              <CardBody className="h-auto bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] rounded-xl p-6   ">
+                <CardItem
+                  translateZ="50"
+                  className="react_icon text-[6vw] lg:text-[2vw] md:text-[2.5vw] sm:text-[5vw] font-bold text-neutral-600 dark:text-zinc-400"
+                >
+                  Devops
+                </CardItem>
+                <>
+                  <CardItem
+                    as="p"
+                    translateZ="70"
+                    className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300  w-[70vw] lg:w-full md:w-full"
+                  >
+                    <div className="flex items-center gap-1 ">
+                      <span className=" text-[18px]">
+                        <LiaDocker className="text-[#1D63ED]" />
+                      </span>
+                      <span className="">Docker</span>
+                    </div>
+                  </CardItem>
+                  <CardItem
+                    as="p"
+                    translateZ="70"
+                    className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300"
+                  >
+                    <div className="flex justify-center items-center gap-1">
+                      <span className=" text-[18px] -ml-[2px]">
+                        <FaAws className="text-[#FF9900]" />
+                      </span>
+                      <span className="">AWS</span>
+                    </div>
+                  </CardItem>
+                  <CardItem
+                    as="p"
+                    translateZ="70"
+                    className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300"
+                  >
+                    <div className="flex justify-center items-center gap-1">
+                      <span className=" text-[18px] font-bold">
+                        {/* <GrMysql className="text-[#00758f] " /> */}
+                      </span>
+                      <span className="text-black">.</span>
+                    </div>
+                  </CardItem>
+                  <CardItem
+                    as="p"
+                    translateZ="70"
+                    className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300"
+                  >
+                    <div className="flex justify-center items-center gap-1">
+                      <span className=" text-[18px] font-bold">
+                        {/* <GrMysql className="text-[#00758f] " /> */}
+                      </span>
+                      <span className="text-black">.</span>
+                    </div>
+                  </CardItem>
+                  <CardItem
+                    as="p"
+                    translateZ="70"
+                    className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300"
+                  >
+                    <div className="flex justify-center items-center gap-1">
+                      <span className=" text-[18px] font-bold">
+                        {/* <GrMysql className="text-[#00758f] " /> */}
+                      </span>
+                      <span className="text-black">.</span>
+                    </div>
+                  </CardItem>
+                </>
+              </CardBody>
+            </CardContainer>
+          </div>
+
+          {/* programming languages */}
+
+          <div className="LANGUAGES">
+            <CardContainer className="inter-var  ">
+              <CardBody className="h-auto bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] rounded-xl p-6   ">
+                <CardItem
+                  translateZ="50"
+                  className="react_icon text-[6vw] lg:text-[2vw] md:text-[2.5vw] sm:text-[5vw] font-bold text-neutral-600 dark:text-zinc-400"
+                >
+                  Languages
+                </CardItem>
+                <>
+                  <CardItem
+                    as="p"
+                    translateZ="70"
+                    className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300  w-[70vw] lg:w-full md:w-full"
+                  >
+                    <div className="flex items-center gap-1 ">
+                      <span className=" text-[18px]">
+                        <RiJavascriptLine className="text-[#F0DB4F]" />
+                      </span>
+                      <span className="">JavaScript</span>
+                    </div>
+                  </CardItem>
+                  <CardItem
+                    as="p"
+                    translateZ="70"
+                    className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300"
+                  >
+                    <div className="flex justify-center items-center gap-1">
+                      <span className=" text-[18px] -ml-[2px]">
+                        <FaJava className="text-[#f89820]" />
+                      </span>
+                      <span className="">Java</span>
+                    </div>
+                  </CardItem>
+
+                  <CardItem
+                    as="p"
+                    translateZ="70"
+                    className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300"
+                  >
+                    <div className="flex justify-center items-center gap-1">
+                      <span className=" text-[18px] font-bold">
+                        {/* <GrMysql className="text-[#00758f] " /> */}
+                      </span>
+                      <span className="text-black">.</span>
+                    </div>
+                  </CardItem>
+
+                  <CardItem
+                    as="p"
+                    translateZ="70"
+                    className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300"
+                  >
+                    <div className="flex justify-center items-center gap-1">
+                      <span className=" text-[18px] font-bold">
+                        {/* <GrMysql className="text-[#00758f] " /> */}
+                      </span>
+                      <span className="text-black">.</span>
+                    </div>
+                  </CardItem>
+
+                  <CardItem
+                    as="p"
+                    translateZ="70"
+                    className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300"
+                  >
+                    <div className="flex justify-center items-center gap-1">
+                      <span className=" text-[18px] font-bold">
+                        {/* <GrMysql className="text-[#00758f] " /> */}
+                      </span>
+                      <span className="text-black">.</span>
+                    </div>
+                  </CardItem>
+                </>
+              </CardBody>
+            </CardContainer>
           </div>
         </div>
       </div>
