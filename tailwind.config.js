@@ -1,22 +1,29 @@
+const {
+  default: flattenColorPalette,
+} = require("tailwindcss/lib/util/flattenColorPalette");
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
+
   theme: {
-    // screens: {
-    //   vsm: "100px",
-    //   //   sm: "640px",
-    //   //   // => @media (min-width: 640px) { ... }
-    //   //   md: "1024px",
-    //   //   // => @media (min-width: 1024px) { ... }
-    //   //   lg: "1280px",
-    //   //   // => @media (min-width: 1280px) { ... }
-    // },
-    // extend: {},
-    // fontFamily: {
-    //   sans: ["grotesk", ...defaultTheme.fontFamily.sans],
-    //   serif: [...defaultTheme.fontFamily.serif],
-    //   mono: [...defaultTheme.fontFamily.mono],
-    // },
+    // rest of the code
+    extend: {
+      boxShadow: {
+        input: `0px 2px 3px -1px rgba(0,0,0,0.1), 0px 1px 0px 0px rgba(25,28,33,0.02), 0px 0px 0px 1px rgba(25,28,33,0.08)`,
+      },
+    },
   },
-  plugins: [],
+  plugins: [addVariablesForColors],
 };
+
+function addVariablesForColors({ addBase, theme }) {
+  let allColors = flattenColorPalette(theme("colors"));
+  let newVars = Object.fromEntries(
+    Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
+  );
+
+  addBase({
+    ":root": newVars,
+  });
+}

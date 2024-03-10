@@ -5,7 +5,7 @@ type flipperType = number;
 const LandingComponent: React.FC = () => {
   const [flipper, setFlipper] = useState<flipperType>(0);
   return (
-    <div className="w-full h-full bg-zinc-800 pt-2 border-2 border-red-700 ">
+    <div className="w-[100vw] h-[100vh] pt-2 bg-zinc-800 border-2 border-red-700 text-zinc-200">
       <div className="textarea">
         <div className="text-[18vw] lg:text-[10vw] md:text-[12vw] sm:text-[15vw] uppercase mt-52 px-5 lg:px-20 md:px-16 sm:px-5 leading-none  secondary_font">
           <div className="text-[14px] lg:text-[20px] md:text-[20px] mb-[2vw] primary_font_600">

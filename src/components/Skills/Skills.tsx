@@ -37,9 +37,9 @@ const Skills = () => {
     },
   };
   return (
-    <div className="w-full min-h-[50%] bg-zinc-800  border-2 border-yellow-500 pt-2">
+    <div className="w-full min-h-[100vh] border-2 border-yellow-500 pt-2">
       <div className="px-5 lg:px-20 md:px-16 sm:px-5 mt-[50]">
-        <div className="Heading secondary_font text-[8vw] lg:text-[5vw] md:text-[6vw] sm:text-[8vw]">
+        <div className="Heading text-zinc-200 secondary_font text-[8vw] lg:text-[5vw] md:text-[6vw] sm:text-[8vw]">
           <h1>Skills</h1>
         </div>
         <div className=" grid grid-rows-4 lg:grid-rows-1 md:grid-rows-2 sm:grid-rows-1 grid-cols-1 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-1 gap-3 primary_font_400 mt-[6vw] lg:mt-[3vw] md:mt-[3vw]">

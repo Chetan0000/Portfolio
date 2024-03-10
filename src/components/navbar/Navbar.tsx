@@ -1,22 +1,19 @@
-import React, { useState } from "react";
+import React, { useState, Dispatch, FC } from "react";
 import DropdownMenuDemo from "./DropdownMenuDemo";
-
-interface navbarLinks {
-  lins: String[];
-}
+import { Link } from "react-scroll";
 
 const Navbar: React.FC = () => {
-  const [links, setLinks] = useState<String[]>([
-    "Home",
-    "About",
-    "Resume",
-    "Skills",
-    "Projects",
-    "Contact",
-  ]);
+  // const [links, setLinks] = useState([
+  //   "home",
+  //   "about",
+  //   "skills",
+  //   "project",
+  //   "contact",
+  // ]);
+  const links = ["Home", "About", "Skills", "Projects", "Contact"];
   return (
     <>
-      <div className="fixed z-[999] w-full text-center flex justify-between px-2 lg:px-20 md:px-16 sm:px-2 text-white pt-[10px] ">
+      <div className="fixed z-[999] w-[100vw] text-center flex justify-between px-2 lg:px-20 md:px-16 sm:px-2 text-white pt-[10px]">
         {/* ---- logo ---------- */}
 
         <div
@@ -37,8 +34,15 @@ const Navbar: React.FC = () => {
                  transition-all duration-200 ease-in-out"
                       href={`#${item}`}
                     >
-                      <span
-                        className="
+                      <Link
+                        to={item.toLowerCase()}
+                        spy={true}
+                        smooth={true}
+                        duration={500}
+                        offset={-70}
+                      >
+                        <span
+                          className="
                         text-lg
                         h-[20px]
                 inline-block
@@ -63,9 +67,10 @@ const Navbar: React.FC = () => {
                 before:to-yellow-500
                 hover:before:w-full
                 hover:before:opacity-100"
-                      >
-                        {item}
-                      </span>
+                        >
+                          {item}
+                        </span>
+                      </Link>
                     </a>
                   </div>
                 );
