@@ -27,15 +27,6 @@ function App() {
 
   return (
     <div className="w-[100vw] h-[100vh] m-auto">
-      <button
-        onClick={() => {
-          projectsRef.current?.scrollIntoView({
-            behavior: "smooth",
-          });
-        }}
-      >
-        Jump to skill
-      </button>
       <Navbar />
       <Element name="home">
         <LandingComponent />

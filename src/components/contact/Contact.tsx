@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-scroll";
+import Form from "./Form";
 
 const Contact = () => {
   const links = ["Home", "About", "Skills", "Projects", "Contact"];
@@ -10,8 +11,8 @@ const Contact = () => {
           <h1>Contact</h1>
         </div>
 
-        <div className="w-full h-full border-2 border-blue-700 flex flex-col lg:flex-row md:flex-row sm:flex-col gap-[20px] mt-11">
-          <div className="LINS w-full h-full border-2 border-green-500 flex flex-row primary_font_400 text-[17px] ">
+        <div className="w-full h-full  flex flex-col-reverse lg:flex-row md:flex-row sm:flex-col gap-[20px] mt-11">
+          <div className="LINS w-full h-full flex flex-row primary_font_400 text-[17px] ">
             <div className="SocialLinks">
               {/* Social Links */}
               <div className="SOCIAL flex flex-col">
@@ -85,8 +86,10 @@ const Contact = () => {
               </div>
             </div>
           </div>
-          <div className="LINS w-full h-full border-2 border-yellow-400 flex">
-            <div className="w-full"></div>
+          <div className="LINS w-full h-full flex justify-center">
+            <div className="w-full lg:w-[80%] md:w-[80%] bg-zinc-900 rounded-md">
+              <Form />
+            </div>
           </div>
         </div>
       </div>

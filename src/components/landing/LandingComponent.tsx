@@ -5,9 +5,9 @@ type flipperType = number;
 const LandingComponent: React.FC = () => {
   const [flipper, setFlipper] = useState<flipperType>(0);
   return (
-    <div className="w-[100vw] h-[100vh] pt-2 bg-zinc-800 border-2 border-red-700 text-zinc-200">
+    <div className="w-[100vw] h-[100vh] pt-2 bg-zinc-800 border-2 border-red-700 text-zinc-200 flex flex-col justify-between">
       <div className="textarea">
-        <div className="text-[18vw] lg:text-[10vw] md:text-[12vw] sm:text-[15vw] uppercase mt-52 px-5 lg:px-20 md:px-16 sm:px-5 leading-none  secondary_font">
+        <div className="text-[18vw] lg:text-[10vw] md:text-[12vw] sm:text-[15vw] uppercase mt-40 px-5 lg:px-20 md:px-16 sm:px-5 leading-none  secondary_font">
           <div className="text-[14px] lg:text-[20px] md:text-[20px] mb-[2vw] primary_font_600">
             Hello
           </div>
@@ -41,6 +41,15 @@ const LandingComponent: React.FC = () => {
           })}
         </div>
         {/* <Button /> */}
+      </div>
+
+      <div className="border-t-[1px] h-[100px] border-zinc-400 -mt-[100px] text-primary_font_400">
+        <div className="px-5 lg:px-20 md:px-16 sm:px-5 flex items-center justify-between py-2">
+          <span className="text-[16px] lg:text-[18px] md:text-[18px]">
+            Hire me
+          </span>
+          <Button />
+        </div>
       </div>
     </div>
   );
