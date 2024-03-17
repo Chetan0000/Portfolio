@@ -3,13 +3,20 @@ import React from "react";
 
 const About = () => {
   return (
-    <div className="w-full min-h-[70%] bg-zinc-800 text-zinc-300  pt-20 text-left lg:text-justify md:text-justify ">
+    <div
+      // data-scroll
+      // data-scroll-section
+      // data-scroll-speed="0.2"
+      // data-scroll-position="middle"
+      // data-enable-touch-speed
+      className="w-full min-h-[90vh] bg-zinc-800 text-zinc-300  pt-20 text-left lg:text-justify md:text-justify "
+    >
       <div className="content px-5 lg:px-20 md:px-16 sm:px-5">
         <div className="HEading secondary_font text-[8vw] lg:text-[5vw] md:text-[6vw] sm:text-[8vw]">
           <h1>About</h1>
         </div>
         <div className="ABOUT w-[90%]   primary_font_400 tracking-tighter">
-          <p className="text-clip text-[5vw] lg:text-[2.5vw] md:text-[3.5vw] sm:text-[5vw] ">
+          <p className="text-clip text-[5vw] lg:text-[2vw] md:text-[2.5vw] sm:text-[5vw] ">
             I'm a passionate software developer with a recent graduation in
             2023. I'm highly proficient in modern web development technologies,
             particularly React.js, Node.js, MongoDB, Express.js, and I possess

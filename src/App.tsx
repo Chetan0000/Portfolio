@@ -8,6 +8,8 @@ import Skills from "./components/Skills/Skills";
 import Projects from "./components/projects/Projects";
 import Contact from "./components/contact/Contact";
 
+import LocomotiveScroll from "locomotive-scroll";
+
 type refType = HTMLDivElement | null;
 
 function App() {
@@ -18,6 +20,7 @@ function App() {
     };
     mp();
   }, []);
+  const locomotiveScroll = new LocomotiveScroll();
 
   const landingRef = useRef<refType>(null);
   const aboutRef = useRef<refType>(null);
@@ -26,7 +29,7 @@ function App() {
   const contactRef = useRef<refType>(null);
 
   return (
-    <div className="w-[100vw] h-[100vh] m-auto">
+    <div className="w-[100vw] h-[100vh] m-auto ">
       <Navbar />
       <Element name="home">
         <LandingComponent />
